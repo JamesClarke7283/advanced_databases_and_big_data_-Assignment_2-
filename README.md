@@ -15,15 +15,13 @@ Make sure rustup is installed and cargo is installed.
 
 ## Commands
 
-Install Dependencies:
+### Install Dependencies
+
+Install `Deno` following [these](https://docs.deno.com/runtime/manual)
+instructions.
+
+### Run
 
 ```bash
-cargo install cargo-leptos
-```
-
-Run in Dev mode:
-
-```bash
-cd src-ui
-cargo leptos watch
+deno task start
 ```
