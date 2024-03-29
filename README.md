@@ -11,7 +11,9 @@ Canterbury Christ Church University.
 
 # Get Started
 
-Make sure rustup is installed and cargo is installed.
+Make sure either `Docker` or `Deno` is installed, and you have git cloned and
+run `cd` to go into the projects directory. Following commands assume you are
+currently in the root of the project directory.
 
 ## Running Manually
 
