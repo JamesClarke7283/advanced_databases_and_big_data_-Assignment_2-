@@ -13,7 +13,7 @@ Canterbury Christ Church University.
 
 Make sure rustup is installed and cargo is installed.
 
-## Commands
+## Running Manually
 
 ### Install Dependencies
 
@@ -24,4 +24,18 @@ instructions.
 
 ```bash
 deno task start
+```
+
+## Running using Docker
+
+### Build the docker image
+
+```bash
+docker build -t adv_db_assignment .
+```
+
+### Run the docker image
+
+```bash
+docker run -p 8000:8000 adv_db_assignment
 ```
