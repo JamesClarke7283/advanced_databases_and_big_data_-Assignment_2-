@@ -5,9 +5,9 @@ Canterbury Christ Church University.
 
 # Features
 
-- Ability to Login and have users
-- Ability to create an account
-- Ability to query data from a mongodb database
+- Ability to query and create data from a mysql database
+- Ability to query and create data from a mongodb database
+
 
 # Get Started
 
@@ -25,7 +25,9 @@ instructions.
 ### Run
 
 ```bash
-deno task start
+docker run --name part1-mysql -e MARIADB_ROOT_PASSWORD=[your-msql-password] -p 127.0.0.1:3306:3306 -d mariadb
+
+DB_PASSWORD=[your-mysql-password] deno task start
 ```
 
 ## Running using Docker
