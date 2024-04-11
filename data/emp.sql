@@ -55,6 +55,3 @@ VALUES (7902, 'FORD', 5, 7566, STR_TO_DATE('03-dec-81', '%d-%M-%y'), 3000, NULL,
 
 INSERT INTO emp (EMPNO, ENAME, JOBID, MGR, HIREDATE, SAL, COMM, DEPTNO)
 VALUES (7934, 'MILLER', 1, 7782, STR_TO_DATE('23-jan-82', '%d-%M-%y'), 1300, NULL, 10);
-</document_content>
-
-And here's the job.sql file that creates the job table and inserts the jobs:
