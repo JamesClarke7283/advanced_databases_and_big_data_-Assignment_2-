@@ -1,6 +1,6 @@
 // Script to initilize the database:
 
-import { Client } from "https://deno.land/x/mysql/mod.ts";
+import { Client } from "mysql";
 
 
 export async function create_database(password: string) {
