@@ -3,7 +3,7 @@
 import { Client } from "https://deno.land/x/mysql/mod.ts";
 
 
-export async function createDatabase(password: string) {
+export async function create_database(password: string) {
   const client = await new Client().connect({
     hostname: "127.0.0.1",
     username: "root",
@@ -38,4 +38,14 @@ export async function createDatabase(password: string) {
   } finally {
     await client.close();
   }
+}
+
+export async function connect_database(password: string): Promise<Client> {
+  const client = await new Client().connect({
+    hostname: "127.0.0.1",
+    username: "root",
+    db: "company",
+    password: password,
+  });
+  return client;
 }

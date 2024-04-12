@@ -5,9 +5,9 @@
 
 - [x] Setup Docker with Mysql. [Mariadb Docker](https://hub.docker.com/_/mariadb)
 
-- [ ] Setup on run, a script to auto-populate the database if it does not exist.
+- [x] Setup on run, a script to auto-populate the database if it does not exist.
 
-- [ ] Create a REST API to interact with the Mysql database (implementing
+- [ ] Create a Frontend to interact with the Mysql database (implementing
       create/query stuff). (Done in Fresh framework)
 
 - [ ] Write a frontend for that REST API (Done in Fresh framework)
