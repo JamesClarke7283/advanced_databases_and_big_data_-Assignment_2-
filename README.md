@@ -27,7 +27,11 @@ instructions.
 ```bash
 docker run --name part1-mysql -e MARIADB_ROOT_PASSWORD=[your-msql-password] -p 127.0.0.1:3306:3306 -d mariadb
 
+# Linux Command
 DB_PASSWORD=[your-mysql-password] deno task start
+# Windows Command
+$env:DB_PASSWORD='[your-mysql-password]'; deno task start
+
 ```
 
 ## Running using Docker
