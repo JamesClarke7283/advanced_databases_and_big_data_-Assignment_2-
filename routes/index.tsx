@@ -1,8 +1,8 @@
-import { useSignal } from "@preact/signals";
+import { useSignal} from "@preact/signals";
+
 import { MainMenuButton } from "../islands/MainMenuButton.tsx";
 
 export default function Home() {
-  const count = useSignal(3);
 
   const handleSearchEmployees = () => {
     // Handle search employees action
@@ -37,10 +37,9 @@ export default function Home() {
               </p>
             </div>
             <div class="p-6 flex flex-col gap-4">
-              {count}
               <MainMenuButton
                 title="Search Employees"
-                onClick={() => count.value++}
+                onClick={handleSearchEmployees}
               />
               <MainMenuButton
                 title="Add Employee"

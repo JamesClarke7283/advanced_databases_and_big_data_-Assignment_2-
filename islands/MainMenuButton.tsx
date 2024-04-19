@@ -1,13 +1,16 @@
+import { useState } from 'preact/hooks';
+
 interface MainMenuButtonProps {
   onClick: () => void;
   title: string;
 }
 
 export function MainMenuButton({ onClick, title }: MainMenuButtonProps) {
+  const [value, setValue] = useState(onClick);
   return (
     <button
       class="flex items-center justify-between border rounded-lg p-4 gap-4 hover:shadow-md transition-all"
-      onClick={onClick}
+      onClick={value}
     >
       <div>{title}</div>
       <svg
