@@ -2,6 +2,16 @@
 
 import { Client } from "mysql";
 
+interface Employee {
+  EMPNO: number;
+  ENAME: string;
+  JOB: string;
+  MANAGER: string;
+  HIREDATE: string;
+  SAL: number;
+  COMM: number | null;
+  DNAME: string;
+}
 
 export async function create_database(password: string) {
   const client = await new Client().connect({
@@ -49,3 +59,36 @@ export async function connect_database(password: string): Promise<Client> {
   });
   return client;
 }
+
+async function loadSql(filePath: string): Promise<string> {
+  try {
+      const sqlContent = await Deno.readTextFile(filePath);  // Using Deno to read file content
+      return sqlContent;
+  } catch (error) {
+      console.error("Error reading SQL file:", error);
+      throw new Error(`Failed to read SQL file at ${filePath}`);
+  }
+}
+
+// Function to add a department using prepared statement from SQL file
+export async function addDepartment(client: Client, deptno: number, dname: string, loc: string): Promise<void> {
+  const sql = await loadSql('../data/add_department.sql');
+  await client.execute(sql, [deptno, dname, loc]);
+  console.log('Department added successfully.');
+}
+
+// Function to add an employee using prepared statement from SQL file
+export async function addEmployee(client: Client, ename: string, jobid: number, mgr: number | null, hiredate: string, sal: number, comm: number | null, deptno: number): Promise<void> {
+  const sql = await loadSql('../data/add_employee.sql');
+  await client.execute(sql, [ename, jobid, mgr, hiredate, sal, comm, deptno]);
+  console.log('Employee added successfully.');
+}
+
+// Function to search employees using prepared statement from SQL file
+export async function searchEmployees(client: Client, searchTerm: string): Promise<Employee[]> {
+  const sql = await loadSql('../data/search_employee.sql');
+  const result = await client.query(sql, [searchTerm, searchTerm, searchTerm]);
+  console.log('Search completed successfully.');
+  return result;
+}
+
