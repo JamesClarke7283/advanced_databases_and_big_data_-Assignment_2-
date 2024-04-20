@@ -2,13 +2,13 @@
 interface ModalProps {
   id: string;
   title: string;
-  content: JSXIntrensicElements;
+  content: JSX.Element;
 }
 
 export default function Component({id, title, content}: ModalProps) {
   return (
     <>
-    <button class="flex items-center justify-between border rounded-lg p-4 gap-4 hover:shadow-md transition-all" onClick={()=>document.getElementById('{id}').showModal()}><div>{title}</div>
+    <button id={`${id}-btn`} className="btn flex items-center justify-between border rounded-lg p-4 gap-4 hover:shadow-md transition-all" onClick={()=>document.getElementById(`${id}-modal`).showModal()}><div>{title}</div>
       <svg
         class="h-4 w-4"
         fill="none"
@@ -24,7 +24,8 @@ export default function Component({id, title, content}: ModalProps) {
         ></path>
       </svg>
 </button>
-<dialog id="{id}" className="modal">
+<dialog id={`${id}-modal`} className="modal">
+
   <div className="modal-box">
     {content}
     <p className="py-4">Press ESC key or click outside to close</p>

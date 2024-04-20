@@ -21,16 +21,16 @@ export default function Home() {
               </p>
             </div>
             <div class="p-6 flex flex-col gap-4">
-            <ModalButton id="search-empolyees-modal" title="Search Employees" content=<h1>Hello World!</h1> />
+            <ModalButton id="search-empolyees" title="Search Employees" content={<h1>Hello World!</h1>} />
               <ModalButton
-                id="add-employee-modal"
+                id="add-employee"
                 title="Add Employee"
-                content=<h1>Hello World 2</h1>
+                content={<h1>Hello World 2</h1>}
               />
               <ModalButton
-                id="add-department-modal"
+                id="add-department"
                 title="Add Department"
-                content=<h1>Hello World 3</h1>
+                content={<h1>Hello World 3</h1>}
               />
               
             </div>
