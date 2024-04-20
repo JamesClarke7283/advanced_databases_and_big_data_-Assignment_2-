@@ -1,3 +1,4 @@
+/*
 import { Button } from "preact/components/ui/button"
 import { DialogTrigger, DialogTitle, DialogDescription, DialogHeader, DialogFooter, DialogContent, Dialog } from "preact/components/ui/dialog"
 
@@ -24,3 +25,4 @@ export default function Component() {
     </Dialog>
   )
 }
+*/
