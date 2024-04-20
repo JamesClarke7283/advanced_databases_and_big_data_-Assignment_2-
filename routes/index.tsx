@@ -1,23 +1,7 @@
 import { useSignal} from "@preact/signals";
-
-import { MainMenuButton } from "../islands/MainMenuButton.tsx";
+import ModalButton from "../islands/ModalButton.tsx"
 
 export default function Home() {
-
-  const handleSearchEmployees = () => {
-    // Handle search employees action
-    console.log("Search Employees clicked");
-  };
-
-  const handleAddEmployee = () => {
-    // Handle add employee action
-    console.log("Add Employee clicked");
-  };
-
-  const handleAddDepartment = () => {
-    // Handle add department action
-    console.log("Add Department clicked");
-  };
 
   return (
     <>
@@ -37,18 +21,18 @@ export default function Home() {
               </p>
             </div>
             <div class="p-6 flex flex-col gap-4">
-              <MainMenuButton
-                title="Search Employees"
-                onClick={handleSearchEmployees}
-              />
-              <MainMenuButton
+            <ModalButton id="search-empolyees-modal" title="Search Employees" content=<h1>Hello World!</h1> />
+              <ModalButton
+                id="add-employee-modal"
                 title="Add Employee"
-                onClick={handleAddEmployee}
+                content=<h1>Hello World 2</h1>
               />
-              <MainMenuButton
+              <ModalButton
+                id="add-department-modal"
                 title="Add Department"
-                onClick={handleAddDepartment}
+                content=<h1>Hello World 3</h1>
               />
+              
             </div>
           </div>
         </main>
