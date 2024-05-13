@@ -1,0 +1,12 @@
+services:
+  part1-mysql:
+    image: mariadb
+    container_name: part1-mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - ./data/part1-mysql:/var/lib/mysql
+    restart: unless-stopped
+

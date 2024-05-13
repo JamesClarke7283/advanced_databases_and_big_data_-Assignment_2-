@@ -10,3 +10,6 @@ _fresh/
 # npm dependencies
 node_modules/
 prompt.txt
+
+data/part1-mysql
+data/part2-mongodb
