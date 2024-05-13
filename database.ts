@@ -11,14 +11,14 @@ export async function create_database(password: string) {
   });
 
   try {
-    const result = await client.query("SHOW DATABASES LIKE 'company'");
+    const result = await client.query("SHOW DATABASES LIKE 'Movies'");
     if (result.length === 0) {
-      console.log("Creating 'company' database...");
-      await client.execute("CREATE DATABASE company");
-      console.log("'company' database created.");
+      console.log("Creating 'Movies' database...");
+      await client.execute("CREATE DATABASE Movies");
+      console.log("'Movies' database created.");
 
-      console.log("Populating 'company' database...");
-      const scripts = ["./data/dept.sql", "./data/job.sql", "./data/emp.sql"];
+      console.log("Populating 'Movies' database...");
+      const scripts = ["./data/tables/country.sql", "./data/tables/artist.sql", "./data/tables/movie.sql", "./data/tables/role.sql", "./data/tables/internet_user.sql", "./data/tables/score_movie.sql"];
       for (const script of scripts) {
         const sqlContent = await Deno.readTextFile(script);
         const stmts = sqlContent.split(";")
