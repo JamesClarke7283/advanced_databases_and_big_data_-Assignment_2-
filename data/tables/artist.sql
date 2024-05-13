@@ -192,7 +192,7 @@ INSERT INTO Artist (artistId, surname, name, DOB) VALUES
 (1271, 'García', 'Andy', '1956-01-01'),
 (1283, 'Bonham Carter', 'Helena', '1966-01-01'),
 (1327, 'MCKellen', 'Ian', '1939-01-01'),
-(1328, 'Astin', 'Sean',	'1971-01-01')
+(1328, 'Astin', 'Sean',	'1971-01-01'),
 (1329, 'Boyd', 'Billy', '1968-01-01'),
 (1330, 'Monaghan', 'Dominic', '1976-01-01'),
 (1331, 'Weaving', 'Hugo', '1960-01-01'),

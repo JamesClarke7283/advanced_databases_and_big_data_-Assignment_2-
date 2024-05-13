@@ -31,9 +31,9 @@ export async function create_database(password: string) {
         }
         console.log(`Executed ${script}`);
       }
-      console.log("'company' database populated.");
+      console.log("'Movies' database populated.");
     } else {
-      console.log("'company' database already exists.");
+      console.log("'Movies' database already exists.");
     }
   } finally {
     await client.close();
