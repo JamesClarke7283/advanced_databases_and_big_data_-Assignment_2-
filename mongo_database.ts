@@ -5,7 +5,7 @@ import { Client } from "mysql";
 
 export async function create_database(password: string) {
   const client = await new Client().connect({
-    hostname: "127.0.0.1",
+    hostname: "part1-mysql",  // Changed from "127.0.0.1" to the service name
     username: "root",
     password: password,
   });
@@ -42,7 +42,7 @@ export async function create_database(password: string) {
 
 export async function connect_database(password: string): Promise<Client> {
   const client = await new Client().connect({
-    hostname: "127.0.0.1",
+    hostname: "part1-mysql",  // Changed from "127.0.0.1" to the service name
     username: "root",
     db: "Movies",
     password: password,

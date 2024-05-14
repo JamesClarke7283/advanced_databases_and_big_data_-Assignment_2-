@@ -51,3 +51,28 @@ docker build -t adv_db_assignment .
 ```bash
 docker run -p 8000:8000 adv_db_assignment
 ```
+
+## Running with Docker Compose
+
+Use these commands to set up and run the services using Docker Compose. This method handles both MySQL and MongoDB services:
+
+### For Unix-like Systems (MacOS & Linux)
+
+```bash
+MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGO_INITDB_ROOT_USERNAME=root MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password> docker-compose up -d
+```
+
+### For Windows (Command Prompt)
+
+```bash
+set MARIADB_ROOT_PASSWORD=<your_mysql_password>
+set MONGO_INITDB_ROOT_USERNAME=root
+set MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password>
+docker-compose up -d
+```
+
+### For Windows (PowerShell)
+
+```bash
+$env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGO_INITDB_ROOT_USERNAME='root'; $env:MONGO_INITDB_ROOT_PASSWORD='<your_mongo_password>'; docker-compose up -d
+```
