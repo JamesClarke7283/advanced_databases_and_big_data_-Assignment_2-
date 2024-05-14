@@ -44,7 +44,7 @@ export async function connect_database(password: string): Promise<Client> {
   const client = await new Client().connect({
     hostname: "127.0.0.1",
     username: "root",
-    db: "company",
+    db: "Movies",
     password: password,
   });
   return client;

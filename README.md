@@ -32,9 +32,9 @@ MARIADB_ROOT_PASSWORD=[your-mysql-password] docker-compose up -d
 $env:MARIADB_ROOT_PASSWORD='[your-mysql-password]' docker-compose up -d
 
 # Linux Command
-DB_PASSWORD=[your-mysql-password] deno task start
+MARIADB_ROOT_PASSWORD=[your-mysql-password] deno task start
 # Windows Command
-$env:DB_PASSWORD='[your-mysql-password]'; deno task start
+$env:MARIADB_ROOT_PASSWORD='[your-mysql-password]'; deno task start
 
 ```
 

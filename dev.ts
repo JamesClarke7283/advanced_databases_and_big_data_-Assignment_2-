@@ -3,11 +3,11 @@
 import dev from "$fresh/dev.ts";
 import config from "./fresh.config.ts";
 import "$std/dotenv/load.ts";
-import { create_database } from "./database.ts";
+import { create_database } from "./mongo_database.ts";
 
-export const password = Deno.env.get("DB_PASSWORD");
+export const password = Deno.env.get("MARIADB_ROOT_PASSWORD");
 if (!password) {
-  console.error("DB_PASSWORD environment variable is not set.");
+  console.error("MARIADB_ROOT_PASSWORD environment variable is not set.");
   Deno.exit(1);
 }
 
