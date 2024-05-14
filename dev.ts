@@ -3,7 +3,7 @@
 import dev from "$fresh/dev.ts";
 import config from "./fresh.config.ts";
 import "$std/dotenv/load.ts";
-import { create_database } from "./mysql_database.ts";
+import { create_database } from "./mongo_database.ts";
 
 export const password = Deno.env.get("MARIADB_ROOT_PASSWORD");
 if (!password) {
