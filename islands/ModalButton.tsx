@@ -1,40 +1,46 @@
-
 interface ModalProps {
   id: string;
   title: string;
-  content: JSX.Element;
+  content: JSX.Element | string;
 }
 
-export default function Component({id, title, content}: ModalProps) {
+export default function Component({ id, title, content }: ModalProps) {
   return (
     <>
-    <button id={`${id}-btn`} className="btn flex items-center justify-between border rounded-lg p-4 gap-4 hover:shadow-md transition-all" onClick={()=>document.getElementById(`${id}-modal`).showModal()}><div>{title}</div>
-      <svg
-        class="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        id={`${id}-btn`}
+        className="btn flex items-center justify-between border rounded-lg p-4 gap-4 hover:shadow-md transition-all"
+        onClick={() => document.getElementById(`${id}-modal`).showModal()}
       >
-        <path
-          d="M19 9l-7 7-7-7"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        ></path>
-      </svg>
-</button>
-<dialog id={`${id}-modal`} className="modal">
-
-  <div className="modal-box">
-    {content}
-    <p className="py-4">Press ESC key or click outside to close</p>
-  </div>
-  <form method="dialog" className="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog>
+        <div>{title}</div>
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 9l-7 7-7-7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          ></path>
+        </svg>
+      </button>
+      <dialog id={`${id}-modal`} className="modal">
+        <div className="modal-box">
+          {typeof content === "string" ? (
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          ) : (
+            content
+          )}
+          <p className="py-4">Press ESC key or click outside to close</p>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </>
-  )
+  );
 }
-
