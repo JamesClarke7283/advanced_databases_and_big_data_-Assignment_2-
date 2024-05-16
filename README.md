@@ -51,7 +51,7 @@ $env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USE
 
 ### For Unix-like Systems (MacOS & Linux) 
 ```bash
-MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGO_INITDB_ROOT_USERNAME=root MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password> deno task start
+MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGODB_INITDB_ROOT_USERNAME=root MONGODB_INITDB_ROOT_PASSWORD=<your_mongo_password> deno task start
 ```
 
 ### For Windows (Command Prompt)
@@ -66,7 +66,7 @@ deno task start
 ### For Windows (PowerShell)
 
 ```bash
-$env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USERNAME='root'; $env:MONGO_INITDB_ROOT_PASSWORD='<your_mongo_password>'; deno task start
+$env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USERNAME='root'; $env:MONGODB_INITDB_ROOT_PASSWORD='<your_mongo_password>'; deno task start
 ```
 
 
