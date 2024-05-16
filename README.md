@@ -22,57 +22,51 @@ currently in the root of the project directory.
 Install `Deno` following [these](https://docs.deno.com/runtime/manual)
 instructions.
 
-### Run
-
-```bash
-# Linux command
-MARIADB_ROOT_PASSWORD=[your-mysql-password] docker-compose up -d
-
-# Windows command
-$env:MARIADB_ROOT_PASSWORD='[your-mysql-password]' docker-compose up -d
-
-# Linux Command
-MARIADB_ROOT_PASSWORD=[your-mysql-password] deno task start
-# Windows Command
-$env:MARIADB_ROOT_PASSWORD='[your-mysql-password]'; deno task start
-
-```
-
-## Running using Docker
-
-### Build the docker image
-
-```bash
-docker build -t adv_db_assignment .
-```
-
-### Run the docker image
-
-```bash
-docker run -p 8000:8000 adv_db_assignment
-```
-
-## Running with Docker Compose
+### Running with Docker Compose
 
 Use these commands to set up and run the services using Docker Compose. This method handles both MySQL and MongoDB services:
 
 ### For Unix-like Systems (MacOS & Linux)
 
 ```bash
-MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGO_INITDB_ROOT_USERNAME=root MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password> docker-compose up -d
+MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGODB_INITDB_ROOT_USERNAME=root MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password> docker-compose up -d
 ```
 
 ### For Windows (Command Prompt)
 
 ```bash
 set MARIADB_ROOT_PASSWORD=<your_mysql_password>
-set MONGO_INITDB_ROOT_USERNAME=root
-set MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password>
+set MONGODB_INITDB_ROOT_USERNAME=root
+set MONGODB_INITDB_ROOT_PASSWORD=<your_mongo_password>
 docker-compose up -d
 ```
 
 ### For Windows (PowerShell)
 
 ```bash
-$env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGO_INITDB_ROOT_USERNAME='root'; $env:MONGO_INITDB_ROOT_PASSWORD='<your_mongo_password>'; docker-compose up -d
+$env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USERNAME='root'; $env:MONGODB_INITDB_ROOT_PASSWORD='<your_mongo_password>'; docker-compose up -d
 ```
+
+## Running the service
+
+### For Unix-like Systems (MacOS & Linux) 
+```bash
+MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGO_INITDB_ROOT_USERNAME=root MONGO_INITDB_ROOT_PASSWORD=<your_mongo_password> deno task start
+```
+
+### For Windows (Command Prompt)
+
+```bash
+set MARIADB_ROOT_PASSWORD=<your_mysql_password>
+set MONGODB_INITDB_ROOT_USERNAME=root
+set MONGODB_INITDB_ROOT_PASSWORD=<your_mongo_password>
+deno task start
+```
+
+### For Windows (PowerShell)
+
+```bash
+$env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USERNAME='root'; $env:MONGO_INITDB_ROOT_PASSWORD='<your_mongo_password>'; deno task start
+```
+
+

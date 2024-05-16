@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . .
 
+EXPOSE 8000
+
 CMD ["deno", "task", "start"]
 
-EXPOSE 8000:8000
+

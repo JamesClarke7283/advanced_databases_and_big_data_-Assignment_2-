@@ -1,4 +1,4 @@
-import ModalButton from "../islands/ModalButton.tsx";import { useEffect, useState } from "preact/hooks";import { fetchAdventureGenreRoles, fetchGenreByCountry, fetchHorrorMovieLanguages, fetchMostActiveUsers } from "../services/dataFetcher.ts";
+import ModalButton from "../islands/ModalButton.tsx";import { useEffect, useState } from "preact/hooks";import { fetchAdventureGenreRoles, fetchGenreByCountry, fetchHorrorMovieLanguages, fetchMostActiveUsers } from "../dataFetcher.ts";
 
 export default function Home() {
   const [adventureRoles, setAdventureRoles] = useState([]);
@@ -73,45 +73,6 @@ export default function Home() {
                   ))}
                 </ul>
               } />
-            </div>
-          </div>
-        </main>
-      </div>
-    </>
-  );
-}
-
-
-export default function Home() {
-  return (
-    <>
-      <link rel="stylesheet" href="/frontpage.css" />
-      <div className="flex flex-col w-full min-h-screen">
-        <main className="flex items-center justify-center flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
-          <div
-            className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-sm p-8"
-            data-v0-t="card"
-          >
-            <div className="flex flex-col space-y-1.5 p-6 pb-0">
-              <h3 className="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
-                Employee Database
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Query the employee database to find the information you need
-              </p>
-            </div>
-            <div className="p-6 flex flex-col gap-4">
-              <ModalButton id="search-employees" title="Search Employees" content="<h1>Hello World!</h1>" />
-              <ModalButton
-                id="add-employee"
-                title="Add Employee"
-                content="<h1>Hello World 2</h1>"
-              />
-              <ModalButton
-                id="add-department"
-                title="Add Department"
-                content="<h1>Hello World 3</h1>"
-              />
             </div>
           </div>
         </main>

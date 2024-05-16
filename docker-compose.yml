@@ -1,27 +1,17 @@
 version: '3.8'
 
-services:
-  advdb-webserver:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}  
-    depends_on:
-      - part2-mongodb
-      - part1-mysql
-
+services: 
   part2-mongodb:
     image: mongodb/mongodb-community-server:latest
+    container_name: part2-mongodb
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGODB_INITDB_ROOT_USERNAME: ${MONGODB_INITDB_ROOT_USERNAME}
+      MONGODB_INITDB_ROOT_PASSWORD: ${MONGODB_INITDB_ROOT_PASSWORD}
     volumes:
-      - ./data/mongodb:/data/db
+      - ./data/part2-mongodb:/data/db
+    restart: unless-stopped
 
   part1-mysql:
     image: mariadb
@@ -29,7 +19,8 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
     ports:
-      - "127.0.0.1:3306:3306"
+      - "3306:3306"
     volumes:
       - ./data/part1-mysql:/var/lib/mysql
     restart: unless-stopped
+
