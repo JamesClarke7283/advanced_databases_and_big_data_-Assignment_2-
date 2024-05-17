@@ -2,7 +2,7 @@ import numpy
 import pandas as pd
 
 # Load the Excel file
-file_path = "data/'Movies Data'.xlsx"
+file_path = "./data/Movies Data.xlsx"
 xl = pd.ExcelFile(file_path)
 
 # Load the Role table and Movies table into DataFrames
@@ -20,7 +20,7 @@ movie_ids = movies_df['movieId'].dropna().astype(int)
 cleaned_roles_df = roles_df[roles_df['movieId'].isin(movie_ids)]
 
 # Save the cleaned Role table to a new Excel file
-cleaned_file_path = 'data/Cleaned_Movies_Data.xlsx'
+cleaned_file_path = './data/Cleaned_Movies_Data.xlsx'
 with pd.ExcelWriter(cleaned_file_path) as writer:
     cleaned_roles_df.to_excel(writer, sheet_name='Cleaned_Role_Table', index=False)
 
