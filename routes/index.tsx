@@ -1,28 +1,30 @@
-import ModalButton from "../islands/ModalButton.tsx";import { useEffect, useState } from "preact/hooks";import { fetchAdventureGenreRoles, fetchGenreByCountry, fetchHorrorMovieLanguages, fetchMostActiveUsers } from "../dataFetcher.ts";
+import { h } from "preact";
+import { Handlers, PageProps } from "$fresh/server.ts";
+import ModalButton from "../islands/ModalButton.tsx";
+import { fetchAdventureGenreRoles, fetchGenreByCountry, fetchHorrorMovieLanguages, fetchMostActiveUsers } from "../dataFetcher.ts";
 
-export default function Home() {
-  const [adventureRoles, setAdventureRoles] = useState([]);
-  const [genreByCountry, setGenreByCountry] = useState([]);
-  const [horrorLanguages, setHorrorLanguages] = useState([]);
-  const [mostActiveUsers, setMostActiveUsers] = useState([]);
+// Define the type for the props
+interface HomePageProps {
+  adventureRoles: { name: string, surname: string }[];
+  genreByCountry: { country: string, genre: string, movie_count: number }[];
+  horrorLanguages: string[];
+  mostActiveUsers: { username: string, watch_count: number }[];
+}
 
-  useEffect(() => {
-    async function getData() {
-      const adventureRolesData = await fetchAdventureGenreRoles();
-      setAdventureRoles(adventureRolesData);
+// Fetch data in the handler
+export const handler: Handlers<HomePageProps> = {
+  async GET(_, ctx) {
+    const adventureRoles = await fetchAdventureGenreRoles();
+    const genreByCountry = await fetchGenreByCountry();
+    const horrorLanguages = await fetchHorrorMovieLanguages();
+    const mostActiveUsers = await fetchMostActiveUsers();
 
-      const genreByCountryData = await fetchGenreByCountry();
-      setGenreByCountry(genreByCountryData);
+    return ctx.render({ adventureRoles, genreByCountry, horrorLanguages, mostActiveUsers });
+  }
+}
 
-      const horrorLanguagesData = await fetchHorrorMovieLanguages();
-      setHorrorLanguages(horrorLanguagesData);
-
-      const mostActiveUsersData = await fetchMostActiveUsers();
-      setMostActiveUsers(mostActiveUsersData);
-    }
-    getData();
-  }, []);
-
+// Component to render the home page
+export default function Home({ data }: PageProps<HomePageProps>) {
   return (
     <>
       <link rel="stylesheet" href="/frontpage.css" />
@@ -41,7 +43,7 @@ export default function Home() {
               <h4 className="text-xl font-semibold">Adventure Genre Roles</h4>
               <ModalButton id="adventure-roles" title="Show Adventure Genre Roles" content={
                 <ul>
-                  {adventureRoles.map(role => (
+                  {data.adventureRoles.map(role => (
                     <li key={role.name + role.surname}>{role.name} {role.surname}</li>
                   ))}
                 </ul>
@@ -50,7 +52,7 @@ export default function Home() {
               <h4 className="text-xl font-semibold">Genre by Country</h4>
               <ModalButton id="genre-country" title="Show Genre by Country" content={
                 <ul>
-                  {genreByCountry.map(item => (
+                  {data.genreByCountry.map(item => (
                     <li key={item.country + item.genre}>{item.country} - {item.genre} ({item.movie_count})</li>
                   ))}
                 </ul>
@@ -59,7 +61,7 @@ export default function Home() {
               <h4 className="text-xl font-semibold">Horror Movie Languages</h4>
               <ModalButton id="horror-languages" title="Show Horror Movie Languages" content={
                 <ul>
-                  {horrorLanguages.map(language => (
+                  {data.horrorLanguages.map(language => (
                     <li key={language}>{language}</li>
                   ))}
                 </ul>
@@ -68,7 +70,7 @@ export default function Home() {
               <h4 className="text-xl font-semibold">Most Active Users</h4>
               <ModalButton id="active-users" title="Show Most Active Users" content={
                 <ul>
-                  {mostActiveUsers.map(user => (
+                  {data.mostActiveUsers.map(user => (
                     <li key={user.username}>{user.username} - {user.watch_count} movies</li>
                   ))}
                 </ul>
