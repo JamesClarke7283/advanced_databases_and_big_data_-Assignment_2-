@@ -30,11 +30,7 @@ export default function Component({ id, title, content }: ModalProps) {
       </button>
       <dialog id={`${id}-modal`} className="modal">
         <div className="modal-box">
-          {typeof content === "string" ? (
             <div dangerouslySetInnerHTML={{ __html: content }} />
-          ) : (
-            content
-          )}
           <p className="py-4">Press ESC key or click outside to close</p>
         </div>
         <form method="dialog" className="modal-backdrop">
