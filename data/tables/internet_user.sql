@@ -139,7 +139,7 @@ INSERT INTO Internet_user (email, surname, name, region) VALUES
 ('anon10113@canterbury.ac.uk', 'Surname10113', 'Name10113', 'US'),
 ('anon10114@canterbury.ac.uk', 'Surname10114', 'Name10114', 'GB'),
 ('anon10115@canterbury.ac.uk', 'Surname10115', 'Name10115', 'GB'),
-('anon10116@canterbury.ac.uk', 'Surname10116', 'Name10116',	'US'),
+('anon10116@canterbury.ac.uk', 'Surname10116', 'Name10116', 'US'),
 ('anon10117@canterbury.ac.uk', 'Surname10117', 'Name10117', 'IT'),
 ('anon10118@canterbury.ac.uk', 'Surname10118', 'Name10118', 'IT'),
 ('anon10119@canterbury.ac.uk', 'Surname10119', 'Name10119', 'FR'),
