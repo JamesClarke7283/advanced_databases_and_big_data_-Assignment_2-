@@ -1,5 +1,3 @@
-// services/dataFetcher.ts
-
 // Example function to fetch Adventure Genre Roles data
 export async function fetchAdventureGenreRoles() {
     // Replace this with actual API call or database query

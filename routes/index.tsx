@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import ModalButton from "../islands/ModalButton.tsx";
+import AdventureGenreRolesModal from "../islands/AdventureGenreRolesModal.tsx";
 import { fetchAdventureGenreRoles, fetchGenreByCountry, fetchHorrorMovieLanguages, fetchMostActiveUsers } from "../dataFetcher.ts";
 
 // Define the type for the props
@@ -41,14 +42,7 @@ export default function Home({ data }: PageProps<HomePageProps>) {
             </div>
             <div className="p-6 flex flex-col gap-4">
               <h4 className="text-xl font-semibold">Adventure Genre Roles</h4>
-              <ModalButton id="adventure-roles" title="Show Adventure Genre Roles" content={
-                <ul>
-                  {data.adventureRoles.map(role => (
-                    <li key={role.name + role.surname}>{role.name} {role.surname}</li>
-                  ))}
-                </ul>
-              } />
-              
+              <AdventureGenreRolesModal/>
               <h4 className="text-xl font-semibold">Genre by Country</h4>
               <ModalButton id="genre-country" title="Show Genre by Country" content={
                 <ul>
