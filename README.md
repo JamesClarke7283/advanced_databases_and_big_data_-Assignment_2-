@@ -67,6 +67,7 @@ deno task start
 
 ```bash
 $env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USERNAME='root'; $env:MONGODB_INITDB_ROOT_PASSWORD='<your_mongo_password>'; deno task start
+```
 
 ## Cleaning data
 We have written a script to help us construct the tables sql scripts in `./data/tables` directory, the following scripts.
@@ -76,7 +77,6 @@ python3 clean-spreadsheet-data.py ./data/Movies\ Data.xlsx --dst-sheet "Movie Ta
 
 # Clean Score_movie table
 python3 clean-spreadsheet-data.py ./data/Movies\ Data.xlsx --dst-sheet "Internet_user Table" --src-sheet "Score_movie Table" --src-column email --dst-column email --output  data/InternetUsers_Cleaned.csv
-
 ```
 
 
