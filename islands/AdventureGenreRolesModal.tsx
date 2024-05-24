@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "preact/hooks";
-import { fetchAdventureGenreRoles } from "../dataFetcher.ts";
+//import { fetchAdventureGenreRoles } from "../dataFetcher.ts";
+import { fetch_adventure_genre_roles } from "../database/mysql/queries.ts";
 import ModalButton from "./ModalButton.tsx";
 
 interface Role {
@@ -14,7 +15,8 @@ export default function Component() {
 
   useEffect(() => {
     async function getAdventureRoles() {
-      const roles = await fetchAdventureGenreRoles();
+      const roles = fetch_adventure_genre_roles();
+      console.log(roles);
       setAdventureRoles(roles);
       setLoading(false);
     }
@@ -31,9 +33,7 @@ export default function Component() {
       title="Show Adventure Genre Roles" 
       content={
         <ul>
-          {adventureRoles.map(role => (
-            <li key={role.name + role.surname}>{role.name} {role.surname}</li>
-          ))}
+        {adventureRoles} 
         </ul>
       } 
     />

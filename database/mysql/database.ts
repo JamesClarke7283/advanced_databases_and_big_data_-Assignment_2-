@@ -2,6 +2,13 @@
 
 import { Client } from "mysql";
 
+export async function execute_sql_file(path: string, password: string) {
+  const db = await connect_database(password); 
+  const sqlContent = await Deno.readTextFile(path);
+  const stmt = sqlContent.trim();
+  return db.query(stmt);
+}
+
 
 export async function create_database(password: string) {
   const client = await new Client().connect({
