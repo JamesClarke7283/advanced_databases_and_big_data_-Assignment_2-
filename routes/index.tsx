@@ -2,6 +2,8 @@ import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import ModalButton from "../islands/ModalButton.tsx";
 import AdventureGenreRolesModal from "../islands/AdventureGenreRolesModal.tsx";
+import GenreCountryViewModal from "../islands/GenreCountryViewModal.tsx";
+import HighestAvgScoreModal from "../islands/HighestAvgScoreModal.tsx";
 
 // Component to render the home page
 export default function Home({ data }: PageProps<HomePageProps>) {
@@ -20,9 +22,11 @@ export default function Home({ data }: PageProps<HomePageProps>) {
               </p>
             </div>
             <div className="p-6 flex flex-col gap-4">
-              <h4 className="text-xl font-semibold">Adventure Genre Roles</h4>
               <AdventureGenreRolesModal/>
-              </div>
+              <GenreCountryViewModal/>
+              <HighestAvgScoreModal/>
+            </div>
+
           </div>
         </main>
       </div>
