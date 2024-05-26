@@ -4,6 +4,7 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $api_adventure_genre_roles from "./routes/api/adventure_genre_roles.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $AdventureGenreRolesModal from "./islands/AdventureGenreRolesModal.tsx";
 import * as $ModalButton from "./islands/ModalButton.tsx";
@@ -13,6 +14,7 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/api/adventure_genre_roles.tsx": $api_adventure_genre_roles,
     "./routes/index.tsx": $index,
   },
   islands: {
