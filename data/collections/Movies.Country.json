@@ -1,0 +1,127 @@
+[
+  {
+    "code": "AU",
+    "name": "Australia",
+    "language": null
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "language": null
+  },
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "language": null
+  },
+  {
+    "code": "BS",
+    "name": "Bahamas",
+    "language": null
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "language": null
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "language": null
+  },
+  {
+    "code": "CN",
+    "name": "China",
+    "language": null
+  },
+  {
+    "code": "CZ",
+    "name": "Czech Republic",
+    "language": null
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "language": "german"
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "language": null
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "language": "spanish"
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "language": "french"
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "language": "english"
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "language": null
+  },
+  {
+    "code": "HK",
+    "name": "Hong Kong",
+    "language": null
+  },
+  {
+    "code": "IE",
+    "name": "Irlande",
+    "language": "english"
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "language": "italien"
+  },
+  {
+    "code": "JO",
+    "name": "Jordan",
+    "language": null
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "language": "japanese"
+  },
+  {
+    "code": "KR",
+    "name": "South Korea",
+    "language": null
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "language": null
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "language": null
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "language": null
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "language": null
+  },
+  {
+    "code": "US",
+    "name": "USA",
+    "language": "english"
+  }
+]
