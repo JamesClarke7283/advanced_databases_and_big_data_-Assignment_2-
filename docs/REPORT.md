@@ -202,9 +202,9 @@ In conclusion, this project not only highlighted our technical skills in databas
 
 ### Tasks of Each Group Member
 
-- **James Clarke**:
-- **Ryan Jones**:
-- **Jose Zea**:
+- **James Clarke**: Frontend and project management (tieing the different codes), worked on the database
+- **Ryan Jones**: worked on the data base and data cleaning. 
+- **Jose Zea**: initial work on frontend, written work predomtly, video, worked on the data base.
 
 ### Collaboration Process
 
