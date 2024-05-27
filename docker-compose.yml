@@ -10,7 +10,7 @@ services:
       MONGODB_INITDB_ROOT_USERNAME: ${MONGODB_INITDB_ROOT_USERNAME}
       MONGODB_INITDB_ROOT_PASSWORD: ${MONGODB_INITDB_ROOT_PASSWORD}
     volumes:
-      - ./data/part2-mongodb:/data/db
+      - part2-mongodb-data:/data/db
     restart: unless-stopped
 
   part1-mysql:
@@ -21,6 +21,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./data/part1-mysql:/var/lib/mysql
+      - part1-mysql-data:/var/lib/mysql
     restart: unless-stopped
 
+volumes:
+  part2-mongodb-data:
+  part1-mysql-data:
