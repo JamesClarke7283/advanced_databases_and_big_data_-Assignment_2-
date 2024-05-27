@@ -79,4 +79,10 @@ python3 clean-spreadsheet-data.py ./data/Movies\ Data.xlsx --dst-sheet "Movie Ta
 python3 clean-spreadsheet-data.py ./data/Movies\ Data.xlsx --dst-sheet "Internet_user Table" --src-sheet "Score_movie Table" --src-column email --dst-column email --output  data/InternetUsers_Cleaned.csv
 ```
 
+## Migrating data to MongoDB
+
+```bash
+MARIADB_ROOT_PASSWORD=<your_password> deno task migrate Movies -o data/collections/
+```
+
 

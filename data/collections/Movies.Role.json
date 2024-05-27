@@ -1,0 +1,302 @@
+[
+  {
+    "movieId": 11,
+    "actorId": 2,
+    "roleName": "Luke Skywalker"
+  },
+  {
+    "movieId": 11,
+    "actorId": 3,
+    "roleName": "Han Solo"
+  },
+  {
+    "movieId": 11,
+    "actorId": 4,
+    "roleName": "Princess Leia Organa"
+  },
+  {
+    "movieId": 11,
+    "actorId": 5,
+    "roleName": "Grand Moff Tarkin"
+  },
+  {
+    "movieId": 11,
+    "actorId": 6,
+    "roleName": "C-3PO"
+  },
+  {
+    "movieId": 11,
+    "actorId": 130,
+    "roleName": "R2-D2"
+  },
+  {
+    "movieId": 15,
+    "actorId": 40,
+    "roleName": "Charles Foster Kane"
+  },
+  {
+    "movieId": 24,
+    "actorId": 139,
+    "roleName": "Beatrix \"The Bride\" Kiddo"
+  },
+  {
+    "movieId": 24,
+    "actorId": 140,
+    "roleName": "O-Ren Ishii"
+  },
+  {
+    "movieId": 24,
+    "actorId": 141,
+    "roleName": "Bill"
+  },
+  {
+    "movieId": 24,
+    "actorId": 147,
+    "roleName": "Budd"
+  },
+  {
+    "movieId": 24,
+    "actorId": 589,
+    "roleName": "Elle Driver"
+  },
+  {
+    "movieId": 33,
+    "actorId": 190,
+    "roleName": "William Munny"
+  },
+  {
+    "movieId": 33,
+    "actorId": 192,
+    "roleName": "Ned Logan"
+  },
+  {
+    "movieId": 33,
+    "actorId": 193,
+    "roleName": "'Little' Bill Daggett"
+  },
+  {
+    "movieId": 33,
+    "actorId": 194,
+    "roleName": "English Bob"
+  },
+  {
+    "movieId": 38,
+    "actorId": 103,
+    "roleName": "Stan Fink"
+  },
+  {
+    "movieId": 38,
+    "actorId": 204,
+    "roleName": "Clementine Kruczynski"
+  },
+  {
+    "movieId": 38,
+    "actorId": 205,
+    "roleName": "Mary Svevo"
+  },
+  {
+    "movieId": 38,
+    "actorId": 206,
+    "roleName": "Joel Barish"
+  },
+  {
+    "movieId": 59,
+    "actorId": 49,
+    "roleName": "Edie Stall"
+  },
+  {
+    "movieId": 59,
+    "actorId": 110,
+    "roleName": "Tom Stall / Joey Cusack"
+  },
+  {
+    "movieId": 59,
+    "actorId": 225,
+    "roleName": "Jack Stall"
+  },
+  {
+    "movieId": 59,
+    "actorId": 227,
+    "roleName": "Richie Cusack"
+  },
+  {
+    "movieId": 59,
+    "actorId": 228,
+    "roleName": "Carl Fogarty"
+  },
+  {
+    "movieId": 62,
+    "actorId": 245,
+    "roleName": "Dr. David Bowman"
+  },
+  {
+    "movieId": 62,
+    "actorId": 246,
+    "roleName": "Dr. Frank Poole"
+  },
+  {
+    "movieId": 62,
+    "actorId": 247,
+    "roleName": "Dr. Heywood Floyd"
+  },
+  {
+    "movieId": 62,
+    "actorId": 248,
+    "roleName": "Moonwatcher"
+  },
+  {
+    "movieId": 62,
+    "actorId": 253,
+    "roleName": "HAL 9000 (voice)"
+  },
+  {
+    "movieId": 74,
+    "actorId": 500,
+    "roleName": "Ray Ferrier"
+  },
+  {
+    "movieId": 74,
+    "actorId": 501,
+    "roleName": "Rachel Ferrier"
+  },
+  {
+    "movieId": 74,
+    "actorId": 502,
+    "roleName": "Mary-Ann"
+  },
+  {
+    "movieId": 74,
+    "actorId": 503,
+    "roleName": "Robbie Ferrier"
+  },
+  {
+    "movieId": 74,
+    "actorId": 504,
+    "roleName": "Harlan Ogilvy"
+  },
+  {
+    "movieId": 75,
+    "actorId": 514,
+    "roleName": "President Dale / Art Land"
+  },
+  {
+    "movieId": 75,
+    "actorId": 515,
+    "roleName": "Marsha Dale"
+  },
+  {
+    "movieId": 75,
+    "actorId": 516,
+    "roleName": "Barbara Land"
+  },
+  {
+    "movieId": 75,
+    "actorId": 517,
+    "roleName": "Donald Kessler"
+  },
+  {
+    "movieId": 75,
+    "actorId": 518,
+    "roleName": "Rude Gambler"
+  },
+  {
+    "movieId": 75,
+    "actorId": 519,
+    "roleName": "Jerry Ross"
+  },
+  {
+    "movieId": 75,
+    "actorId": 520,
+    "roleName": "Nathalie Lake"
+  },
+  {
+    "movieId": 75,
+    "actorId": 521,
+    "roleName": "Jason Stone"
+  },
+  {
+    "movieId": 75,
+    "actorId": 522,
+    "roleName": "General Decker"
+  },
+  {
+    "movieId": 77,
+    "actorId": 529,
+    "roleName": "Leonard Shelby"
+  },
+  {
+    "movieId": 77,
+    "actorId": 530,
+    "roleName": "Natalie"
+  },
+  {
+    "movieId": 77,
+    "actorId": 532,
+    "roleName": "John Edward \"Teddy\" Gammell"
+  },
+  {
+    "movieId": 77,
+    "actorId": 534,
+    "roleName": "Burt"
+  },
+  {
+    "movieId": 77,
+    "actorId": 535,
+    "roleName": "Waiter"
+  },
+  {
+    "movieId": 77,
+    "actorId": 536,
+    "roleName": "Catherine Shelby"
+  },
+  {
+    "movieId": 78,
+    "actorId": 3,
+    "roleName": "Rick Deckard"
+  },
+  {
+    "movieId": 78,
+    "actorId": 585,
+    "roleName": "Roy Batty"
+  },
+  {
+    "movieId": 78,
+    "actorId": 586,
+    "roleName": "Rachael"
+  },
+  {
+    "movieId": 78,
+    "actorId": 587,
+    "roleName": "Gaff"
+  },
+  {
+    "movieId": 78,
+    "actorId": 588,
+    "roleName": "Bryant"
+  },
+  {
+    "movieId": 85,
+    "actorId": 3,
+    "roleName": "Indiana Jones"
+  },
+  {
+    "movieId": 87,
+    "actorId": 3,
+    "roleName": "Indiana Jones"
+  },
+  {
+    "movieId": 89,
+    "actorId": 3,
+    "roleName": "Indiana Jones"
+  },
+  {
+    "movieId": 98,
+    "actorId": 194,
+    "roleName": "Marcus Aurelius"
+  },
+  {
+    "movieId": 103,
+    "actorId": 380,
+    "roleName": "Travis Bickle"
+  }
+]
