@@ -1,0 +1,12 @@
+db.movies.find(
+  {
+    genre: "Adventure",
+    year: 2022
+  },
+  {
+    _id: 0,
+    title: 1,
+    genre: 1,
+    year: 1
+  }
+)

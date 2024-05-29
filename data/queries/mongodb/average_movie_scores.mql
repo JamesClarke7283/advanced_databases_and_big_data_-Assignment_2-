@@ -1,0 +1,22 @@
+db.movies.aggregate([
+  {
+    $lookup: {
+      from: "score_movie",
+      localField: "movieId",
+      foreignField: "movieId",
+      as: "movieScores"
+    }
+  },
+  {
+    $unwind: "$movieScores"
+  },
+  {
+    $group: {
+      _id: "$title",
+      averageScore: { $avg: "$movieScores.score" }
+    }
+  },
+  {
+    $sort: { averageScore: -1 }
+  }
+])

@@ -1,0 +1,29 @@
+db.movies.aggregate([
+  {
+    $group: {
+      _id: "$countryCode",
+      movieCount: { $sum: 1 }
+    }
+  },
+  {
+    $lookup: {
+      from: "country",
+      localField: "_id",
+      foreignField: "code",
+      as: "countryDetails"
+    }
+  },
+  {
+    $unwind: "$countryDetails"
+  },
+  {
+    $project: {
+      _id: 0,
+      country: "$countryDetails.name",
+      movieCount: 1
+    }
+  },
+  {
+    $sort: { movieCount: -1 }
+  }
+])
