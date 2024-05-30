@@ -4,6 +4,9 @@ import ModalButton from "../islands/ModalButton.tsx";
 import AdventureGenreRolesModal from "../islands/AdventureGenreRolesModal.tsx";
 import GenreCountryViewModal from "../islands/GenreCountryViewModal.tsx";
 import HighestAvgScoreModal from "../islands/HighestAvgScoreModal.tsx";
+import AverageMovieScoresModal from "../islands/AverageMovieScoresModal.tsx";
+import CountriesWithMostMoviesModal from "../islands/CountriesWithMostMoviesModal.tsx";
+import MoviesByGenreAndYear from "../islands/MoviesByGenreAndYear.tsx"
 
 // Component to render the home page
 export default function Home({ data }: PageProps<HomePageProps>) {
@@ -21,10 +24,17 @@ export default function Home({ data }: PageProps<HomePageProps>) {
                 Explore the movie database using the following queries.
               </p>
             </div>
+            <h3 className="text-center">Mysql</h3>
             <div className="p-6 flex flex-col gap-4">
               <AdventureGenreRolesModal/>
               <GenreCountryViewModal/>
               <HighestAvgScoreModal/>
+            </div>
+            <h3 className="text-center">MongoDB</h3>
+            <div className="p-6 flex flex-col gap-4">
+              <AverageMovieScoresModal/>
+              <CountriesWithMostMoviesModal/>
+              <MoviesByGenreAndYear/>
             </div>
 
           </div>

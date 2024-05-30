@@ -5,13 +5,19 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_adventure_genre_roles from "./routes/api/adventure_genre_roles.tsx";
+import * as $api_average_movie_scores from "./routes/api/average_movie_scores.tsx";
+import * as $api_countries_with_most_movies from "./routes/api/countries_with_most_movies.tsx";
 import * as $api_genre_country_view from "./routes/api/genre_country_view.tsx";
 import * as $api_highest_avg_score from "./routes/api/highest_avg_score.tsx";
+import * as $api_movies_by_genre_and_year from "./routes/api/movies_by_genre_and_year.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $AdventureGenreRolesModal from "./islands/AdventureGenreRolesModal.tsx";
+import * as $AverageMovieScoresModal from "./islands/AverageMovieScoresModal.tsx";
+import * as $CountriesWithMostMoviesModal from "./islands/CountriesWithMostMoviesModal.tsx";
 import * as $GenreCountryViewModal from "./islands/GenreCountryViewModal.tsx";
 import * as $HighestAvgScoreModal from "./islands/HighestAvgScoreModal.tsx";
 import * as $ModalButton from "./islands/ModalButton.tsx";
+import * as $MoviesByGenreAndYear from "./islands/MoviesByGenreAndYear.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -19,15 +25,22 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/api/adventure_genre_roles.tsx": $api_adventure_genre_roles,
+    "./routes/api/average_movie_scores.tsx": $api_average_movie_scores,
+    "./routes/api/countries_with_most_movies.tsx":
+      $api_countries_with_most_movies,
     "./routes/api/genre_country_view.tsx": $api_genre_country_view,
     "./routes/api/highest_avg_score.tsx": $api_highest_avg_score,
+    "./routes/api/movies_by_genre_and_year.tsx": $api_movies_by_genre_and_year,
     "./routes/index.tsx": $index,
   },
   islands: {
     "./islands/AdventureGenreRolesModal.tsx": $AdventureGenreRolesModal,
+    "./islands/AverageMovieScoresModal.tsx": $AverageMovieScoresModal,
+    "./islands/CountriesWithMostMoviesModal.tsx": $CountriesWithMostMoviesModal,
     "./islands/GenreCountryViewModal.tsx": $GenreCountryViewModal,
     "./islands/HighestAvgScoreModal.tsx": $HighestAvgScoreModal,
     "./islands/ModalButton.tsx": $ModalButton,
+    "./islands/MoviesByGenreAndYear.tsx": $MoviesByGenreAndYear,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
