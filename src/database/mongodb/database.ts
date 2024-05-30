@@ -21,9 +21,19 @@ export async function get_collection_from_file(collection_name: string): Promise
     }
 }
 
+export async function database_exists(client: MongoClient, dbName: string) {
+    const adminDb = client.db().admin();
+    const dbs = await adminDb.listDatabases();
+    return dbs.databases.some(db => db.name === dbName);
+}
+
 export async function create_mongo_database(password: string) {
     const client = connect_mongo_database(password);
+    if (await database_exists(client, "Movies")) {
+        console.log("MongoDB database already populated")
+    } else {
     const db = client.db("Movies");
+
     const collections = ['Artist', 'Country', 'Internet_user', 'Movie', 'Role', 'Score_movie']
     for (const collection of collections) {
         const db_collection = db.collection(collection);
@@ -31,4 +41,5 @@ export async function create_mongo_database(password: string) {
         console.log("MongoDB: Inserting: "+JSON.stringify(collection_content) +" into "+ collection)
         db_collection.insertMany(collection_content);
     }
+}
 }
