@@ -1,7 +1,7 @@
-db.movies.aggregate([
+db.Movie.aggregate([
   {
     $lookup: {
-      from: "score_movie",
+      from: "Score",
       localField: "movieId",
       foreignField: "movieId",
       as: "movieScores"

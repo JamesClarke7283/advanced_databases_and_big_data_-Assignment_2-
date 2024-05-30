@@ -1,7 +1,7 @@
-db.movies.find(
+db.Movie.find(
   {
     genre: "Adventure",
-    year: 2022
+    year: 2005
   },
   {
     _id: 0,

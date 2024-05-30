@@ -1,4 +1,4 @@
-db.movies.aggregate([
+db.Movie.aggregate([
   {
     $group: {
       _id: "$countryCode",
@@ -7,7 +7,7 @@ db.movies.aggregate([
   },
   {
     $lookup: {
-      from: "country",
+      from: "Country",
       localField: "_id",
       foreignField: "code",
       as: "countryDetails"
@@ -19,7 +19,7 @@ db.movies.aggregate([
   {
     $project: {
       _id: 0,
-      country: "$countryDetails.name",
+      Country: "$countryDetails.name",
       movieCount: 1
     }
   },
