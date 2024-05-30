@@ -3,14 +3,14 @@
 import { Client } from "mysql";
 
 export async function execute_sql_file(path: string, password: string) {
-  const db = await connect_database(password); 
+  const db = await connect_mysql_database(password); 
   const sqlContent = await Deno.readTextFile(path);
   const stmt = sqlContent.trim();
   return db.query(stmt);
 }
 
 
-export async function create_database(password: string) {
+export async function create_mysql_database(password: string) {
   const client = await new Client().connect({
     hostname: "127.0.0.1",
     username: "root",
@@ -47,7 +47,7 @@ export async function create_database(password: string) {
   }
 }
 
-export async function connect_database(password: string): Promise<Client> {
+export async function connect_mysql_database(password: string): Promise<Client> {
   const client = await new Client().connect({
     hostname: "127.0.0.1",
     username: "root",

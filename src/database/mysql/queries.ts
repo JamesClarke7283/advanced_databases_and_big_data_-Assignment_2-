@@ -1,8 +1,8 @@
-import { connect_database } from "./database.ts";
+import { connect_mysql_database } from "./database.ts";
 import { password } from "../../config.ts";
 
 export async function fetch_adventure_genre_roles() {
-  const db = await connect_database(password);
+  const db = await connect_mysql_database(password);
   const stmt = `
     SELECT DISTINCT a.name, a.surname 
     FROM Artist a 
@@ -17,7 +17,7 @@ export async function fetch_adventure_genre_roles() {
 }
 
 export async function fetch_genre_country_view() {
-  const db = await connect_database(password);
+  const db = await connect_mysql_database(password);
   const stmt = `
     SELECT c.name AS country, m.genre, COUNT(*) AS num_movies
     FROM Movie m
@@ -30,7 +30,7 @@ export async function fetch_genre_country_view() {
 }
 
 export async function fetch_highest_avg_score() {
-  const db = await connect_database(password);
+  const db = await connect_mysql_database(password);
   const stmt = `
     SELECT m.title, AVG(sm.score) AS average_score, COUNT(sm.email) AS num_users
     FROM Movie m

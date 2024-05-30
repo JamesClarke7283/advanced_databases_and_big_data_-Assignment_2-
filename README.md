@@ -56,7 +56,7 @@ MARIADB_ROOT_PASSWORD=<your_mysql_password> MONGODB_INITDB_ROOT_USERNAME=root MO
 
 ### For Windows (Command Prompt)
 
-```bash
+```powershell
 set MARIADB_ROOT_PASSWORD=<your_mysql_password>
 set MONGODB_INITDB_ROOT_USERNAME=root
 set MONGODB_INITDB_ROOT_PASSWORD=<your_mongo_password>
@@ -65,7 +65,7 @@ deno task start
 
 ### For Windows (PowerShell)
 
-```bash
+```powershell
 $env:MARIADB_ROOT_PASSWORD='<your_mysql_password>'; $env:MONGODB_INITDB_ROOT_USERNAME='root'; $env:MONGODB_INITDB_ROOT_PASSWORD='<your_mongo_password>'; deno task start
 ```
 
