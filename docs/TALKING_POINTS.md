@@ -6,7 +6,7 @@
 
 ### Speaker: James
 
-Discuss the task brief, what we have been tasked to do & breif mention of their role in the project (**Frontend,** **DB Backend**, **Data Cleaning Scripts**, **Project Manager**).
+Discuss the task brief, what we have been tasked to do & breif mention of their role in the project (**Frontend,** **DB Backend**, **Data Cleaning Scripts**, **Project Manager**, ***Report Checking and Writing***).
 
 ---
 
