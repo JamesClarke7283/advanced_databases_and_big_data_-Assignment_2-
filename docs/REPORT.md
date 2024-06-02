@@ -69,15 +69,49 @@ CREATE TABLE movies ( movieId INT PRIMARY KEY, title VARCHAR(255), director VARC
   
   **Data Import**:
   
-
 - Data was imported from CSV files into the respective tables. We wrote custom scripts to parse the CSV files and load data into the database. This step was crucial for populating our database with initial data and ensuring that the data was accurate and consistent.
   
 - The import scripts ensured data consistency by validating the data before insertion and handling any errors that occurred during the process. This approach minimized the risk of data corruption and ensured that our database maintained high data quality.
   
-- Example Python script for data import:
+- Example Deno script for data import:
   
-  ```python
-  import csv import mysql.connector conn = mysql.connector.connect( host="localhost", user="root", password="password", database="movies_db" ) cursor = conn.cursor() with open('movies.csv', 'r') as file: reader = csv.reader(file) for row in reader: cursor.execute("INSERT INTO movies (movieId, title, director, releaseYear) VALUES (%s, %s, %s, %s)", row) conn.commit() cursor.close() conn.close()
+  ```javascript
+  export async function create_mysql_database(password: string) {
+  const client = await new Client().connect({
+    hostname: "127.0.0.1",
+    username: "root",
+    password: password,
+  });
+
+  try {
+    const result = await client.query("SHOW DATABASES LIKE 'Movies'");
+    if (result.length === 0) {
+      console.log("Creating 'Movies' database...");
+      await client.execute("CREATE DATABASE Movies");
+      console.log("'Movies' database created.");
+
+      console.log("Populating 'Movies' database...");
+      const scripts = ["./data/tables/country.sql", "./data/tables/artist.sql", "./data/tables/movie.sql", "./data/tables/role.sql", "./data/tables/internet_user.sql", "./data/tables/score_movie.sql"];
+      for (const script of scripts) {
+        const sqlContent = await Deno.readTextFile(script);
+        const stmts = sqlContent.split(";")
+        for (let stmt of stmts) {
+          stmt = stmt.trim()
+          if (stmt) {
+          console.log(`Executing ${stmt+";"}`)
+          await client.execute(stmt+";");
+          }
+        }
+        console.log(`Executed ${script}`);
+      }
+      console.log("'Movies' database populated.");
+    } else {
+      console.log("'Movies' database already exists.");
+    }
+  } finally {
+    await client.close();
+  }
+  }
   ```
   
 
