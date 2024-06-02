@@ -1,4 +1,4 @@
-Advanced Database and Big Data - Assignment 2: Group Project
+## Advanced Database and Big Data - Assignment 2: Group Project
 
 ### Group Members:
 
@@ -8,7 +8,7 @@ Advanced Database and Big Data - Assignment 2: Group Project
 
 ### Submission Date:
 
-May 2024
+June 2nd 2024
 
 ---
 
@@ -58,9 +58,9 @@ CREATE TABLE movies ( movieId INT PRIMARY KEY, title VARCHAR(255), director VARC
   
 - Example Python script for data import:
   
-  python
-  
-  `import csv import mysql.connector conn = mysql.connector.connect( host="localhost", user="root", password="password", database="movies_db" ) cursor = conn.cursor() with open('movies.csv', 'r') as file: reader = csv.reader(file) for row in reader: cursor.execute("INSERT INTO movies (movieId, title, director, releaseYear) VALUES (%s, %s, %s, %s)", row) conn.commit() cursor.close() conn.close()`
+  ```python
+  import csv import mysql.connector conn = mysql.connector.connect( host="localhost", user="root", password="password", database="movies_db" ) cursor = conn.cursor() with open('movies.csv', 'r') as file: reader = csv.reader(file) for row in reader: cursor.execute("INSERT INTO movies (movieId, title, director, releaseYear) VALUES (%s, %s, %s, %s)", row) conn.commit() cursor.close() conn.close()
+  ```
   
 
 4. **Data Integrity and Constraints**:
@@ -70,9 +70,9 @@ CREATE TABLE movies ( movieId INT PRIMARY KEY, title VARCHAR(255), director VARC
   
 - Example of adding a foreign key constraint to the Rating table:
   
-  sql
-  
-  `ALTER TABLE ratings ADD CONSTRAINT fk_user FOREIGN KEY (userId) REFERENCES users(userId), ADD CONSTRAINT fk_movie FOREIGN KEY (movieId) REFERENCES movies(movieId);`
+  ```sql
+  ALTER TABLE ratings ADD CONSTRAINT fk_user FOREIGN KEY (userId) REFERENCES users(userId), ADD CONSTRAINT fk_movie FOREIGN KEY (movieId) REFERENCES movies(movieId);
+  ```
   
 
 #### MongoDB Database Setup
@@ -125,9 +125,9 @@ json
   
 - Example of referencing in MongoDB:
   
-  json
-  
-  `{ "userId": "abc123", "name": "John Doe", "email": "john@example.com", "favoriteMovies": [ { "movieId": "xyz789", "title": "Inception" }, { "movieId": "uvw456", "title": "Interstellar" } ] }`
+  ```json
+  { "userId": "abc123", "name": "John Doe", "email": "john@example.com", "favoriteMovies": [ { "movieId": "xyz789", "title": "Inception" }, { "movieId": "uvw456", "title": "Interstellar" } ] }
+  ```
   
 
 By setting up both MySQL and MongoDB databases with carefully designed schemas and efficient data import processes, we ensured that our system could handle complex queries and data manipulation tasks effectively. This backend preparation laid a strong foundation for the rest of our project.
@@ -140,13 +140,17 @@ To interact with the databases, we utilized Deno, a modern runtime for JavaScrip
 
 We used Deno to run SQL queries against the MySQL database. The following code snippet demonstrates a query to retrieve user data from MySQL:
 
-`import { Client } from "https://deno.land/x/mysql/mod.ts"; const client = await new Client().connect({ hostname: "127.0.0.1", username: "root", db: "movies_db", poolSize: 3, // connection limit password: "password", }); const result = await client.query("SELECT * FROM users"); console.log(result); await client.close();`
+```javascript
+import { Client } from "https://deno.land/x/mysql/mod.ts"; const client = await new Client().connect({ hostname: "127.0.0.1", username: "root", db: "movies_db", poolSize: 3, connection limit password: "password", }); const result = await client.query("SELECT * FROM users"); console.log(result); await client.close();
+```
 
 #### Querying MongoDB
 
 For MongoDB, we also used Deno to interact with the database. Here’s an example of querying MongoDB to retrieve movie data:
 
-`import { MongoClient } from "https://deno.land/x/mongo/mod.ts"; const client = new MongoClient(); client.connectWithUri("mongodb://localhost:27017"); const db = client.database("movies_db"); const movies = db.collection("movies"); const allMovies = await movies.find(); console.log(allMovies);`
+```javascript
+import { MongoClient } from "https://deno.land/x/mongo/mod.ts"; const client = new MongoClient(); client.connectWithUri("mongodb://localhost:27017"); const db = client.database("Movies"); const movies = db.collection("Movie"); const allMovies = await movies.find(); console.log(allMovies);
+```
 
 By using Deno for querying both MySQL and MongoDB, we ensured consistency in our codebase and took advantage of modern, secure runtime features.
 
@@ -215,5 +219,6 @@ Looking ahead, there are several areas where we can further enhance our system:
 
 In conclusion, this project not only highlighted our technical skills in database management but also underscored the importance of collaboration and problem-solving in achieving project goals. The successful implementation of both MySQL and MongoDB databases has equipped us with valuable knowledge and experience that will be beneficial in future endeavors.
 
-## Introduction
-
+## Links
+[Source code](https://github.com/JamesClarke7283/advanced_databases_and_big_data_a2)
+[Video Link](https://youtu.be/9YJSXtwoomU)
