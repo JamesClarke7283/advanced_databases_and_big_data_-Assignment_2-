@@ -13,24 +13,25 @@ June 2nd 2024
 ---
 
 ## Table of Contents
-1. [Introduction]
-2. [Implementation]
-  1. [Database Preparation (Backend)]
-    - [MySQL Database Setup]
-    - [MongoDB Database Setup]
-  2. [Technique (Frontend)]
-    - [Querying MySQL]
-    - [Querying MongoDB]
-3. [Results]
-4. [Conclusion]
-  - [Key Achievements]
-  - [Challenges and Solutions]
-  - [Collaborative Efforts]
-  - [Future Work]
-5. [Group Work]
-  - [Collaboration Process]
-7. [Source Code]
-8. [References]
+1. [Introduction](#introduction)
+2. [Implementation](#implementation)
+   1. [Database Preparation (Backend)](#database-preparation-backend)
+      - [MySQL Database Setup](#mysql-database-setup)
+      - [MongoDB Database Setup](#mongodb-database-setup)
+   2. [Technique (Frontend)](#technique-frontend)
+      - [Querying MySQL](#querying-mysql)
+      - [Querying MongoDB](#querying-mongodb)
+3. [Results](#results)
+4. [Conclusion](#conclusion)
+   - [Key Achievements](#key-achievements)
+   - [Challenges and Solutions](#challenges-and-solutions)
+   - [Collaborative Efforts](#collaborative-efforts)
+   - [Future Work](#future-work)
+5. [Group Work](#group-work)
+   - [Collaboration Process](#collaboration-process)
+6. [Source Code](#source-code-1)
+7. [References](#references)
+
 
 In this project, we aimed to develop a robust system capable of querying and creating data from both MySQL and MongoDB databases. This project is part of the Advanced Database and Big Data module, focusing on the practical implementation of database management and data processing techniques. By leveraging the strengths of both relational and NoSQL databases, we sought to create a flexible and scalable data management system.
 
@@ -235,10 +236,8 @@ Looking ahead, there are several areas where we can further enhance our system:
 - Integrating advanced data analytics and machine learning techniques can provide deeper insights into user behavior and movie ratings, enhancing the system's value.
 
 In conclusion, this project not only highlighted our technical skills in database management but also underscored the importance of collaboration and problem-solving in achieving project goals. The successful implementation of both MySQL and MongoDB databases has equipped us with valuable knowledge and experience that will be beneficial in future endeavors.
-<<<<<<< HEAD
-=======
 
 ## Links
 [Source code](https://github.com/JamesClarke7283/advanced_databases_and_big_data_a2)
 [Video Link](https://youtu.be/9YJSXtwoomU)
->>>>>>> ae0beb515e33507be727f8205319604560190723
+
